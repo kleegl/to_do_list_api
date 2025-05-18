@@ -27,4 +27,4 @@ async def get_db():
             await session.rollback()
             raise
         finally:
-            session.close()
+            await session.close()

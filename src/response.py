@@ -11,11 +11,13 @@ class TaskResponse(BaseSchema):
     created_at: datetime
     updated_at: datetime
     status: TaskStatus
+    user_id: int
 
 
 class UserBaseResponse(BaseSchema):
     id: int
     name: str
+    is_admin: bool
 
 
 class UserResponse(BaseSchema):
